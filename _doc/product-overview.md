@@ -1,7 +1,7 @@
 # Product Overview
 
 ## Working Title
-**Coffee Passport** *(provisional — name to be confirmed by user)*
+**Cafessistant**
 
 ## Summary
 A personal coffee shop journey tracker for frequent travelers. The app records every coffee shop visit with ratings and notes, organises the history by city, and delivers smart recommendations — revisit a previously-liked spot or discover a new highly-rated one — whenever the user arrives in a city.
