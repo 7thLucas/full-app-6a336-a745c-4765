@@ -1,40 +1,61 @@
 <style>
   .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
+  .mode-landscape .sl-main-panel { width: 60%; display: flex; flex-direction: column; }
+  .mode-landscape .sl-visual-panel { width: 40%; }
   .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-portrait .sl-main-panel { flex: 1; display: flex; flex-direction: column; }
+  .mode-portrait .sl-visual-panel { min-height: 200px; flex-shrink: 0; }
 </style>
-<section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#8B4513;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#8B4513; border-color:#8B451330;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
 
-        </span>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-foundation-layout h-full">
+
+    <!-- Left: problem + solution stacked -->
+    <div class="sl-main-panel">
+
+      <!-- Problem zone -->
+      <div class="flex-1 flex flex-col justify-center px-10 py-8" style="background-color:#2C1810;">
+        <span class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#C8763A;">The Problem</span>
+        <h2 class="font-black leading-snug mb-3 text-white" style="font-size:1.35rem;">
+          You've been here before — but can you remember if you liked it?
+        </h2>
+        <p class="text-sm leading-relaxed" style="color:#C4A88E; max-width:520px;">
+          Frequent travelers visit dozens of coffee shops across many cities. Without a record, past experiences fade — they revisit places they didn't enjoy, and miss chances to return to spots they genuinely loved.
+        </p>
       </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Forgotten Coffee Shop Experiences</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">You&#x27;ve sipped espresso in Rome, found an incredible pour-over in Tokyo, and loved that hidden café in Barcelona—but when you return months later, you can&#x27;t remember which ones. Each new city feels like starting from zero, and you end up at generic chains instead of gems you loved.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#8B4513;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#8B4513;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Travelers and coffee lovers struggle to recall which coffee shops they visited, what they enjoyed about them, and struggle to find quality coffee venues when visiting new cities or returning to familiar ones.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Coffee lovers, frequent travelers, digital nomads, and remote workers who value quality experiences and discovery.</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Create a memory bank for meaningful travel moments and build a personalized guide to the world&#x27;s best coffee culture.</p></div>
+
+      <!-- Solution zone -->
+      <div class="flex-1 flex flex-col justify-center px-10 py-8" style="background-color:#FDF8F2;">
+        <span class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#C8763A;">The Solution</span>
+        <h2 class="font-black leading-snug mb-4" style="font-size:1.2rem; color:#2C1810;">
+          A coffee journal that remembers for you — and recommends what's next
+        </h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2 text-sm" style="color:#5A3825;">
+            <span class="font-bold flex-shrink-0" style="color:#C8763A;">→</span>
+            <span>Log any visit in under 30 seconds — star rating, tasting notes, location</span>
+          </li>
+          <li class="flex items-start gap-2 text-sm" style="color:#5A3825;">
+            <span class="font-bold flex-shrink-0" style="color:#C8763A;">→</span>
+            <span>Browse your full history by city — instant "been here before" context at a glance</span>
+          </li>
+          <li class="flex items-start gap-2 text-sm" style="color:#5A3825;">
+            <span class="font-bold flex-shrink-0" style="color:#C8763A;">→</span>
+            <span>Smart recommendations: your favorites first, then new top-rated spots you haven't tried yet</span>
+          </li>
+        </ul>
       </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">travel</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">coffee</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">discovery</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">personalization</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">location-based</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">recommendations</span></div>
-      <div class="mt-8"><data-attribution /></div>
+
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=confused+traveler+in+coffee+shop%2C+looking+at+phone%2C+travel+map%2C+multiple+coffee+cups&amp;keyspace=lgtb0jom&amp;user_id=4765" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Right: supporting image -->
+    <div class="sl-visual-panel relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20confident%20traveler%20at%20a%20cozy%20artisan%20coffee%20shop%20in%20a%20foreign%20city%2C%20looking%20at%20their%20phone%20with%20a%20warm%20smile%2C%20city%20street%20visible%20through%20window%2C%20warm%20afternoon%20light%2C%20editorial%20travel%20photography%2C%20authentic%20atmosphere"
+        alt="Traveler at a coffee shop"
+        class="w-full h-full object-cover"
+      />
     </div>
+
   </div>
 </section>
